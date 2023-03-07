@@ -1,0 +1,30 @@
+/* Vuetify */
+.v-pagination__item {
+  background: transparent !important;
+  font-weight: 400 !important;
+  font-size: 0.84rem !important;
+  height: 25px !important;
+  min-width: 28px !important;
+  color: #00c400;
+}
+
+.v-pagination__navigation {
+  height: 28px !important;
+  width: 28px !important;
+  margin: 0.3rem 10px !important;
+}
+
+/* Layout */
+body {
+  -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.nowidth-scrollbar {
+  overflow-x: hidden !important;
+}
+.contents-height {
+  min-height: 960px !important;
+}
