@@ -24,7 +24,12 @@ const router = new VueRouter({
                 { path: '/EpIssueGMKT', name: 'EpIssueGMKT', component: () => import('@/views/EpIssueGMKT') },
                 { path: '/EpIssueIACC', name: 'EpIssueIACC', component: () => import('@/views/EpIssueIACC') },
                 { path: '/PcsIssueGMKT', name: 'PcsIssueGMKT', component: () => import('@/views/PcsIssueGMKT') },
-                { path: '/PcsIssueIACC', name: 'PcsIssueIACC', component: () => import('@/views/PcsIssueIACC') }
+                { path: '/PcsIssueIACC', name: 'PcsIssueIACC', component: () => import('@/views/PcsIssueIACC') },
+
+                { path: '/CouponIssueP3GMKT', name: 'CouponIssueP3GMKT', component: () => import('@/views/CouponIssueP3GMKT') },
+                { path: '/CouponIssueP3IACC', name: 'CouponIssueP3IACC', component: () => import('@/views/CouponIssueP3IACC') },
+                { path: '/CouponIssueP4GMKT', name: 'CouponIssueP4GMKT', component: () => import('@/views/CouponIssueP4GMKT') },
+                { path: '/CouponIssueP4IACC', name: 'CouponIssueP4IACC', component: () => import('@/views/CouponIssueP4IACC') },
             ]
         },
         

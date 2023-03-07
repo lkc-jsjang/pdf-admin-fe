@@ -1,9 +1,9 @@
 <template>
 <v-container fill-height class="ma-0 pa-0">
-    <div style="margin:50px; background-color:#E64A19; height: 580px; width: 800px;">
+    <div class="about_notice">
       <v-row no-gutters style="height:20px">
         <v-col>
-            <div style="text-align:center; margin-top:15px; color:white; font-weight: bold;">
+            <div style="text-align: center; margin-top: 15px; color: white; font-weight: bold;">
                 [PDF Admin Tool 사용에 대한 공지]
             </div>
         </v-col> 
@@ -31,7 +31,7 @@
       </v-row>
       <v-row style="height:50px;">
         <v-col>
-            <div style="text-align:center; margin-top:15px; color:white; font-weight: bold;">
+            <div style="text-align: center; margin-top: 15px; color: white; font-weight: bold;">
                 [PDF Admin Tool 사용 권한 요청]
             </div>
         </v-col>                 
@@ -73,5 +73,13 @@ export default {
 .container {
     min-width: 1100px;
     width: 1100px;
+}
+.about_notice {
+    /* position: absolute; */
+    /* top:0; */
+    margin: 80px; 
+    background-color:#E64A19; 
+    width: 800px;
+    height: 580px; 
 }
 </style>

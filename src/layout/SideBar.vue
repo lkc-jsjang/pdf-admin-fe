@@ -43,7 +43,7 @@
             </v-list-item-content>
           </template>
 
-          <v-list-item v-for="menu in menus_L0_L1_2_L2" :key="menu.id" link>
+          <v-list-item v-for="menu in menus_L0_L1_2_L2" :key="menu.id" link :to="menu.url">
               <v-list-item-icon>
                   <v-icon>{{ menu.icon }}</v-icon>
               </v-list-item-icon>          
@@ -104,10 +104,7 @@ export default {
    },
    data() {
      return {
-      admins: [
-        ['Management', 'mdi-account-multiple-outline'],
-        ['Settings', 'mdi-cog-outline'],
-      ]
+      not_link: '/about',
      }
    },
    methods: {

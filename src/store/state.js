@@ -34,8 +34,8 @@ const state = {
     menus_L0_L1_2_L2: [
         { id: 0, name: 'PCS_P3(카탈로그)(승인포함)(GMKT)', icon: 'mdi-cog', url: '/CouponIssueP3GMKT' },
         { id: 1, name: 'PCS_P3(카탈로그)(승인포함)(IACC)', icon: 'mdi-cog', url: '/CouponIssueP3IACC' },
-        { id: 2, name: 'PCS_P4(카테고리)(승인포함)(GMKT)', icon: 'mdi-cog', url: '/CouponIssueP3GMKT' },
-        { id: 3, name: 'PCS_P4(카테고리)(승인포함)(IACC)', icon: 'mdi-cog', url: '/CouponIssueP3GMKT' },                        
+        { id: 2, name: 'PCS_P4(카테고리)(승인포함)(GMKT)', icon: 'mdi-cog', url: '/CouponIssueP4GMKT' },
+        { id: 3, name: 'PCS_P4(카테고리)(승인포함)(IACC)', icon: 'mdi-cog', url: '/CouponIssueP4IACC' },                        
     ],
 
     menus_L0_L1_3_L2: [
