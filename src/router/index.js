@@ -30,6 +30,18 @@ const router = new VueRouter({
                 { path: '/CouponIssueP3IACC', name: 'CouponIssueP3IACC', component: () => import('@/views/CouponIssueP3IACC') },
                 { path: '/CouponIssueP4GMKT', name: 'CouponIssueP4GMKT', component: () => import('@/views/CouponIssueP4GMKT') },
                 { path: '/CouponIssueP4IACC', name: 'CouponIssueP4IACC', component: () => import('@/views/CouponIssueP4IACC') },
+
+                { path: '/ReportGMKT', name: 'ReportGMKT', component: () => import('@/views/ReportGMKT') },
+                { path: '/ReportIACC', name: 'ReportIACC', component: () => import('@/views/ReportIACC') },
+                { path: '/PriceGMKT', name: 'PriceGMKT', component: () => import('@/views/PriceGMKT') },
+                { path: '/PriceIACC', name: 'PriceIACC', component: () => import('@/views/PriceIACC') },
+                { path: '/PDFInformGMKT', name: 'PDFInformGMKT', component: () => import('@/views/PDFInformGMKT') },
+                { path: '/PDFInformIACC', name: 'PDFInformIACC', component: () => import('@/views/PDFInformIACC') },
+                { path: '/CatalogInformGMKT', name: 'CatalogInformGMKT', component: () => import('@/views/CatalogInformGMKT') },
+                { path: '/CatalogInformIACC', name: 'CatalogInformIACC', component: () => import('@/views/CatalogInformIACC') }, 
+                
+                { path: '/EpSettingGMKT', name: 'EpSettingGMKT', component: () => import('@/views/EpSettingGMKT') },
+                { path: '/EpSettingIACC', name: 'EpSettingIACC', component: () => import('@/views/EpSettingIACC') },
             ]
         },
         

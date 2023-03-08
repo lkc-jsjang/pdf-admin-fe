@@ -50,8 +50,8 @@ const state = {
     ],    
 
     menus_L0_L1_4_L2: [
-        { id: 0, name: 'EP환경설정_추가/상세보기(GMKT)', icon: 'mdi-cog', url: '/EpsettingDetailGMKT' },
-        { id: 1, name: 'EP환경설정_추가/상세보기(IACC)', icon: 'mdi-cog', url: '/EpsettingDetailIACC' },
+        { id: 0, name: 'EP환경설정(GMKT)', icon: 'mdi-cog', url: '/EpSettingGMKT' },
+        { id: 1, name: 'EP환경설정(IACC)', icon: 'mdi-cog', url: '/EpSettingIACC' },
     ],
 
 }

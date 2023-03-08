@@ -1,5 +1,6 @@
 <template>
-<v-container fill-height class="ma-0 pa-0">
+<v-container fill-height fluid class="ma-0 pa-0">
+<div style="width:100%;">
     <div class="about_notice">
       <v-row no-gutters style="height:20px">
         <v-col>
@@ -60,6 +61,7 @@
         </v-col>                         
       </v-row>
     </div>
+</div>
 </v-container>
 </template>
 
@@ -71,15 +73,14 @@ export default {
 
 <style scoped>
 .container {
-    min-width: 1100px;
-    width: 1100px;
+    align-items: center;
 }
+
 .about_notice {
-    /* position: absolute; */
-    /* top:0; */
-    margin: 80px; 
-    background-color:#E64A19; 
     width: 800px;
-    height: 580px; 
+    height: 580px;     
+    background-color:#E64A19; 
+    margin: 0 auto;
 }
+
 </style>
