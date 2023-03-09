@@ -1,6 +1,6 @@
 <template>
 <v-container fill-height fluid class="ma-0 pa-0">
-<div style="width:100%;">
+    <div style="width:100%;">
     <div class="about_notice">
       <v-row no-gutters style="height:20px">
         <v-col>
@@ -53,7 +53,7 @@
                 </v-row>
                 <v-row>
                     <v-col>
-                        3. CM Tool 오류 발생시 remedy를 통해 신고<br />
+                        3. PDF Admin Tool 오류 발생시 remedy를 통해 신고<br />
                         -> remedy+ : IAC >> 요청관리 - 요청서 작성 (업무분류 : 통합 CM Tool > 오류 발생 메뉴선택)                        
                     </v-col>
                 </v-row>
@@ -61,7 +61,7 @@
         </v-col>                         
       </v-row>
     </div>
-</div>
+    </div>
 </v-container>
 </template>
 

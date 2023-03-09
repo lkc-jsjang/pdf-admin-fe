@@ -15,7 +15,7 @@
     <!-- 페이지별로 width/height size 조정이 필요함 -->
     <v-row no-gutters style="width:100%; min-width:1000px; height:860px;">
         <v-col class="grey lighten-3 pt-5 pl-4">
-            <v-icon color="deep-orange">mdi-code-greater-than</v-icon>
+            <v-icon color="blue darken-1">mdi-code-greater-than</v-icon>
         </v-col>
     </v-row>            
 
