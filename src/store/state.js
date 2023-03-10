@@ -2,7 +2,6 @@ const state = {
     project: {
         drawer: true,
         mini: false,
-        isLogin: false,
     },
 
     menus_L0_1: [

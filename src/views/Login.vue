@@ -10,10 +10,11 @@
                   <v-card-text>                        
                     <v-form ref="signForm">
                       <v-text-field                                    
-                        prepend-icon="mdi-account"      
+                        prepend-icon="mdi-account"
                         v-model="form.domain"                       
                         :rules="domain_rule"
                         label="도메인"
+                        disabled
                         type="text"
                         placeholder="ebayKorea 도메인을 입력해주세요."
                         ></v-text-field>                      
@@ -38,8 +39,8 @@
                   </v-card-text>
                   
                   <v-card v-if="show" flat color="grey lighten-4" width="80%" class="d-flex align-center justify-center mb-5" style="margin: 0 auto;">
-                      <v-card-text class="red--text d-flex align-center justify-center">
-                        계정 혹은 비밀번호가 일치하지 않습니다. 입력한 내용을 다시 확인해 주세요.
+                      <v-card-text v-model="text" class="red--text d-flex align-center justify-center">
+                        {{ message }}
                       </v-card-text>
                   </v-card>
                   <v-card-actions>
@@ -74,6 +75,7 @@ export default {
     data() {
       return {
           show : false,
+          message : '',
           form: {
             domain: 'ebaykorea',
             username: '',
@@ -116,6 +118,7 @@ export default {
                 if(this.$route.path!=='/about') this.$router.push('/about')
             }
             else {
+                this.message = "계정 혹은 비밀번호가 일치하지 않습니다. 입력한 내용을 다시 확인해 주세요.";
                 this.show = true;
             }
 
@@ -124,6 +127,9 @@ export default {
           .catch(e=>{
             console.log("signIn catch !! ")
             console.log(e);
+
+            this.message = "Network 문제가 발생했습니다. 잠시 후 다시 사용해 주세요.";
+            this.show = true;
           })
         }
       },
@@ -142,3 +148,6 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+</style>
