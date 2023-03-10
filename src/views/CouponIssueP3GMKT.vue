@@ -13,9 +13,36 @@
     </v-row>
 
     <!-- 페이지별로 width/height size 조정이 필요함 -->
-    <v-row no-gutters style="width:100%; min-width:1000px; height:860px;">
-        <v-col class="grey lighten-3 pt-5 pl-4">
-            <v-icon class="deep-orange--text">mdi-code-greater-than</v-icon>
+    <v-row no-gutters style="width:100%; min-width:1000px;">
+        <v-col class="pt-5 pl-4 pr-4">
+        <v-row no-gutters style="width:100%">
+            <v-col>
+            <v-row no-gutters class="mb-3">
+                <v-col>
+                    <v-icon color="blue darken-1">mdi-code-greater-than</v-icon>
+                    PCS P3 쿠폰 신규 등록 (GMKT)
+                </v-col>
+            </v-row>
+            <v-row no-gutters lazy-validation>
+                <v-col>
+                    <CouponRegister registerMenu="G3" />
+
+                </v-col>
+            </v-row>            
+            </v-col>
+        </v-row>
+        <v-row no gutters style="width:100%">
+            <v-col>
+            <v-row no-gutters>
+                <v-icon color="blue darken-1">mdi-code-greater-than</v-icon>
+                PCS P3 쿠폰 발행정보 조회 (GMKT)
+            </v-row>
+            <v-row no-gutters>
+                <v-icon color="blue darken-1">mdi-code-greater-than</v-icon>
+                PCS P3 쿠폰 발행정보 조회 (GMKT)
+            </v-row>            
+            </v-col>
+        </v-row>
         </v-col>
     </v-row>            
 
@@ -25,11 +52,16 @@
 </template>
 
 <script>
+import CouponRegister from './CouponRegister.vue';
 
 export default {
     name: 'CouponIssueP3GMKT',
+
+    components: { CouponRegister },
+
     data() {
-        return {};
+        return {
+        };
     },
 }
 
@@ -39,4 +71,14 @@ export default {
 .container {
     align-items: start;
 }
+
+table {
+    border: 1px solid black;
+}
+
+.register {
+    padding: 10px;
+    text-align: center;
+}
 </style>
+
