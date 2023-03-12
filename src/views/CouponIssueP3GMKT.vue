@@ -26,7 +26,6 @@
             <v-row no-gutters lazy-validation>
                 <v-col>
                     <CouponRegister registerMenu="G3" />
-
                 </v-col>
             </v-row>            
             </v-col>
@@ -76,9 +75,5 @@ table {
     border: 1px solid black;
 }
 
-.register {
-    padding: 10px;
-    text-align: center;
-}
 </style>
 
