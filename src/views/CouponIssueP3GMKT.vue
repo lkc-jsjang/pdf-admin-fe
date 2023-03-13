@@ -25,7 +25,7 @@
             </v-row>
             <v-row no-gutters lazy-validation>
                 <v-col>
-                    <CouponRegister registerMenu="G3" />
+                    <CouponRegister registerMenu="G3" @updateParentValue="updateParentValue" />
                 </v-col>
             </v-row>            
             </v-col>
@@ -36,17 +36,32 @@
                 <v-icon color="blue darken-1">mdi-code-greater-than</v-icon>
                 PCS P3 쿠폰 발행정보 조회 (GMKT)
             </v-row>
-            <v-row no-gutters>
-                <v-icon color="blue darken-1">mdi-code-greater-than</v-icon>
-                PCS P3 쿠폰 발행정보 조회 (GMKT)
-            </v-row>            
             </v-col>
         </v-row>
         </v-col>
     </v-row>            
-
   </v-col>
 </v-row>
+
+<!-- 에러메시지 다이얼로그 -->
+<v-row>
+    <v-col cols="auto">
+      <v-dialog transition="dialog-top-transition" max-width="400" height="200" v-model="dialogVisible">
+        <v-card>
+            <v-card-title class="red darken-1 text-body-1 white--text font-weight-bold">
+               {{ alertTitle }}
+            </v-card-title>
+            <v-card-text class="mt-10 text-body-2 grey--text text--darken-3">{{ alertMessage }}</v-card-text>
+            <v-divider></v-divider>
+            <v-card-actions>
+               <v-spacer></v-spacer>
+               <v-btn color="primary" text @click="dialogVisible = false" style="font-weight:bold;">확인</v-btn>
+            </v-card-actions>
+        </v-card>
+      </v-dialog>
+    </v-col>      
+</v-row>
+
 </v-container>
 </template>
 
@@ -60,7 +75,18 @@ export default {
 
     data() {
         return {
+            alertTitle: '',
+            alertMessage: '',
+            dialogVisible: false,
         };
+    },
+
+    methods: {
+        updateParentValue(alertTitle, alertMessage) {
+           this.dialogVisible = true;
+           this.alertTitle = alertTitle;
+           this.alertMessage = alertMessage;
+        }
     },
 }
 
