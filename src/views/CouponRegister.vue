@@ -178,26 +178,26 @@ export default {
            formData.append('file', this.excelFile);
 
            if (this.txtGroupName.length == 0) {
-                this.updateParentValue("내부 관리명을 입력해 주세요");            
+                this.updateParentValue("내부 관리명을 입력해 주세요", -1);            
                 this.$refs.refTxtGroupName.focus();
             }
             else if (this.txtTR.length == 0) {
-                this.updateParentValue("TR제한을 입력해 주세요");                
+                this.updateParentValue("TR제한을 입력해 주세요", -1);                
                 this.$refs.refTxtTR.focus();
             }
             else if (isNaN(this.txtTR)) {
-               this.updateParentValue("TR제한은 숫자만 입력해 주세요");
+               this.updateParentValue("TR제한은 숫자만 입력해 주세요", -1);
                this.$refs.refTxtTR.focus();
             } 
             else if (parseInt(this.txtTR) < -50 || parseInt(this.txtTR) > 50) {
-                this.updateParentValue("TR제한은 -50% ~ 50% 까지 가능합니다");
+                this.updateParentValue("TR제한은 -50% ~ 50% 까지 가능합니다", -1);
                 this.$refs.refTxtTR.focus();
             }
             else if (this.issue_selected == null) {
-                this.updateParentValue("발행구분을 선택해 주세요");
+                this.updateParentValue("발행구분을 선택해 주세요", -1);
             }
             else if (this.excelFile === undefined || this.excelFile === null) {
-                this.updateParentValue("첨부파일을 등록하세요");                
+                this.updateParentValue("첨부파일을 등록하세요", -1);                
                 this.$refs.refExcelFile.focus();
             }
             else {
@@ -218,25 +218,24 @@ export default {
                       issue_selected : this.issue_selected, 
                       pcsSiteIdValueString : this.pcsSiteIdValueString,
                       pcsSiteNameValueString : this.pcsSiteNameValueString,
-                    }, 
+                    },
                 }) 
                 .then(res=>{
                     console.log("/postPDFV4P3ManageRegist Vue JS Call Success");
                     console.log(res);
-                    this.alertTitle = "성공";
-                    this.updateParentValue("PCS P3 신규 쿠폰이 등록 되었습니다");  
+                    this.updateParentValue("PCS P3 신규 쿠폰이 등록 되었습니다", 0);  
                 })
                 .catch(e=>{
                     console.log("/postPDFV4P3ManageRegist Vue JS Call Failure");
                     console.log(e);
-                    this.updateParentValue("PCS P3 쿠폰 신규 등록에 실패했습니다");  
-                })                
+                    this.updateParentValue("PCS P3 쿠폰 신규 등록에 실패했습니다", -1);  
+                })
             }
 
        },
 
-       updateParentValue(alertMessage) {
-           this.$emit("updateParentValue", this.alertTitle, alertMessage);
+       updateParentValue(alertMessage, alertValue) {
+           this.$emit("updateParentValue", alertMessage, alertValue);
        },       
 
     },
