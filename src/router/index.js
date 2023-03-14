@@ -11,13 +11,15 @@ const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
-        { path: '/', redirect: '/CouponIssueP3GMKT' },
+        { path: '/', redirect: '/about' },
         { path: '/login', name: 'login', component: Login },
 
         {
             path: '/',
             component: Layout,
             children: [
+                { path: '/actuator/health', name: 'actuator', component: () => import('@/views/About') },  // for server heartbit
+
                 { path: '/about', name: 'about', component: () => import('@/views/About') },
                 { path: '/auth', name:'auth', component: () => import('@/views/Auth') },
                 
